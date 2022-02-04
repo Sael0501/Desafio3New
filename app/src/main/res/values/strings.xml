@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">BookodemiaSael</string>
+    <string name="tv_saludo_login">¡Bienvenido!</string>
+    <string name="tiet_correo">Correo</string>
+    <string name="tiet_password_login">Contraseña</string>
+    <string name="btn_login">Iniciar Sesion</string>
+    <string name="tv_registro_login">¿Todavía no tienes cuenta? Registrate</string>
+    <string name="tv_texto_registro">Estas a unos cuantos pasos de vivir la mejor experiencia</string>
+    <string name="tv_regresar_registro"><![CDATA[< Regresar]]></string>
+    <string name="tv_registro">Registra tu informacion</string>
+    <string name="bt_registro">Crear cuenta</string>
+    <string name="tiet_usuario">Usuario</string>
+    <string name="tiet_registro_correo">Correo</string>
+    <string name="tiet_registro_password">Contrasena</string>
+    <string name="tiet_registro_password2">Confirmar contrasena</string>
+    <string name="tv_regresar_home"><![CDATA[< Regresar]]></string>
+    <string name="tv_saludo_home">Hola</string>
+    <string name="tv_usuario_home">Sael117</string>
+    <string name="tv_libros_home">Libros</string>
+    <string name="tv_categorias_home">Categorias</string>
+    <string name="tv_autores_home">Autores</string>
+    <string name="tv_agregados_home">Recien Agregados</string>
+    <string name="tv_populares_home">Mas Populares</string>
+    <string name="tv_regresar_detalles"><![CDATA[< Regresar]]></string>
+    <string name="tv_title_detalle">Title</string>
+    <string name="tv_autor_detalles">by Autor</string>
+    <string name="tv_categoria_detalles">Categoria</string>
+    <string name="tv_descripcion_detalles">Descripcion</string>
+    <string name="tv_detalles2">Detalles</string>
+    <string name="tv_texto_detalles">Esta es una descripción, is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s</string>
+    <string name="tv_sobre_autor">Sobre el Autor</string>
+    <string name="tv_nombre_autor">Nombre del Autor</string>
+    <string name="tv_descripcion_autor">Esta es una descripción, is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s</string>
+    <string name="tv_cv_title">Titulo</string>
+    <string name="tv_cv_autor">by Autor</string>
+    <string name="tv_cv_categoria">Categoria</string>
+</resources>
