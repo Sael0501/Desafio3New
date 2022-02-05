@@ -1,5 +1,9 @@
 package mx.kodemia.bookodemiasael.adaptadores
 
+import android.app.Activity
+import android.content.Context
+import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,10 +13,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.google.android.material.card.MaterialCardView
+import mx.kodemia.bookodemiasael.Detalles
+import mx.kodemia.bookodemiasael.Home
 import mx.kodemia.bookodemiasael.R
-import mx.kodemia.bookodemiasael.model.dataClass.DataClassHome
+import mx.kodemia.bookodemiasael.model.libros.Book
 
-class BookAdapter(val listaLibros: MutableList<DataClassHome>) :
+class BookAdapter(val listaLibros: MutableList<Book>, val activity: Activity) :
     RecyclerView.Adapter<BookAdapter.Libros>() {
 
     class Libros(val view: View) : RecyclerView.ViewHolder(view) {
@@ -22,14 +28,26 @@ class BookAdapter(val listaLibros: MutableList<DataClassHome>) :
         val autor: TextView = view.findViewById(R.id.text_autor)
         val categoria: TextView = view.findViewById(R.id.text_categoria)
 
-        fun info(listaLibros: DataClassHome) {
-            titulo.text = listaLibros.titulo_libro
-            autor.text = listaLibros.autor_libro
-            categoria.text = listaLibros.categoria_libro
+        fun info(listaLibros: Book) {
+            titulo.text = listaLibros.attributes.title
+            //autor.text = listaLibros.relationships.authors
+           // categoria.text = listaLibros.categoria_libro
 
             Glide.with(view).load(listaLibros.book).error(R.drawable.libro_2)
                 .diskCacheStrategy(DiskCacheStrategy.NONE)
                 .into(book)
+
+            cardView.setOnClickListener{
+                detallesLibro(view.context, listaLibros )
+            }
+        }
+
+        fun detallesLibro(context: Context, libro: Book){
+            val bundle = Bundle()
+            bundle.putSerializable("book", libro)
+            val intent = Intent(context.applicationContext,Detalles::class.java)
+            intent.putExtras(bundle)
+            context.startActivity(intent)
         }
     }
 
@@ -45,9 +63,10 @@ class BookAdapter(val listaLibros: MutableList<DataClassHome>) :
 
     override fun getItemCount(): Int = listaLibros.size
 
-    fun insertarLibro(datosLibro: DataClassHome) {
+   /* fun insertarLibro(datosLibro: Book) {
         this.listaLibros.add(datosLibro)
         notifyItemInserted(itemCount)
-    }
+    }*/
+
 
 }
